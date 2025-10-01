@@ -22,7 +22,7 @@ def load_csv(test_subject, trial, folder, file):
         data (pd.DataFrame): The loaded CSV file as a pandas DataFrame.
     """
 
-    file_path = os.path.abspath(f'../W02/sessions/{test_subject}/{trial}/{folder}/{file}.csv')
+    file_path = os.path.abspath(f'data/{test_subject}/{trial}/{folder}/{file}.csv')
     data = pd.read_csv(file_path)
     
     return data
@@ -40,7 +40,7 @@ def load_csv_0(test_subject, folder, filename):
     Returns:
         data (pd.DataFrame): The loaded CSV file as a pandas DataFrame.
     """
-    file_path = os.path.join(os.path.relpath(f'../W02/sessions/test_subject_0/gaze/' + folder), f'{filename}.csv')#f'data/test_subjects/{test_subject}/gaze/' + folder), f'{filename}.csv')
+    file_path = os.path.join(os.path.relpath(f'data/test_subject_0/gaze/' + folder), f'{filename}.csv')#f'data/test_subjects/{test_subject}/gaze/' + folder), f'{filename}.csv')
 
     data = pd.read_csv(file_path)
     
