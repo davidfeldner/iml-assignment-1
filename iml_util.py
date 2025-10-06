@@ -433,7 +433,7 @@ def gen_data_subject_0():
         pupils = create_pupil_data(load_csv_0('test_subject_0', str(f), 'pupils'))
         positions_n= create_position_data(load_csv_0('test_subject_0', str(f), 'normalized_screen_coordinates'))
         positions= create_position_data(load_csv_0('test_subject_0', str(f), 'positions'))
-        images = [open_img(os.path.abspath(f'data/test_subjects/test_subject_0/gaze/{f}'), i) for i in range(len(positions)-1)]
+        images = [open_img(os.path.abspath(f'data/test_subject_0/gaze/{f}'), i) for i in range(len(positions)-1)]
         D.append({
             "pupils_n_train": pupils_n[:9],
             "pupils_n_test": pupils_n[9:],
